@@ -4,4 +4,12 @@
 
 <p><%= startingContent %></p>
 
+<% posts.forEach(post => { %> 
+    <h1><%=post.title%></h1>
+    <p>
+        <%=post.content.substring(0, 120) + " ... "%>
+        <a href="posts/<%=post.title%>">Read More</a>
+    </p> 
+<% }); %>
+
 <%- include("partials/footer"); -%>
